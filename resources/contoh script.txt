@@ -1,0 +1,103 @@
+// function initMap() {
+// const pekanbaru = {
+// lat: 0.50791,
+// lng: 101.44539
+// };
+
+// const map = new google.maps.Map(document.getElementById("maps"), {
+// zoom: 12,
+// center: pekanbaru,
+// mapTypeControl: false,
+// fullscreenControl: false
+// });
+
+// lokasiRumahsakits.forEach(e => {
+// let rumahsakits = '';
+
+// e.layanan.forEach(el => {
+// rumahsakits +=
+// `<li class="text-start smalltext">${el.nama_rumahsakit} </li>`;
+// });
+
+// const contentString =
+// `<div class="w-auto h-auto container">
+    // <h6 class="text-dark mb-3"><b>${e.rumahsakit} ${e.nama_rumahsakit}</b></h6>
+    // <div class="row">
+        // <div class="col-4">
+            // <img src="{{ asset('gambar') }}/${e.foto_rumahsakit}" class="img-thumbnail"
+                style="width: 150px; height: 180px; object-fit: cover">
+            // </div>
+        // <div class="col-8">
+            // <table class="popup">
+                // <tr>
+                    // <td><b>Alamat</b></td>
+                    // <td>:</td>
+                    // <td>${e.alamat_rumahsakit}</td>
+                    // </tr>
+
+                // <tr>
+                    // <td class="up"><b>Layanan yang tersedia:</b></td>
+                    // <td class="up">:</td>
+                    // <td>
+                        // <ul>${nama_layanan}</ul>
+                        // </td>
+                    // </tr>
+                // </table>
+            // </div>
+        // </div>
+    // </div>`;
+
+// let infowindow = new google.maps.InfoWindow({
+// content: contentString,
+// });
+
+// let url = '/assets/user/img/clients/';
+
+// // switch (e.jenis_layanan) {
+// // case 'Rumah Sakit':
+// // url += 'rs.png';
+// // break;
+// // case 'Puskesmas':
+// // url += 'puskesmas.png';
+// // break;
+// // case 'Klinik':
+// // url += 'klinik.png';
+// // break;
+// // case 'Klinik Gigi':
+// // url += 'gigi.png';
+// // break;
+// // case 'Balai':
+// // url += 'balai.png';
+// // break;
+// // }
+
+// let image = {
+// url: url,
+// scaledSize: new google.maps.Size(40, 40)
+// };
+
+// let marker = new google.maps.Marker({
+// position: {
+// lat: e.latitude,
+// lng: e.longitude
+// },
+// title: `${e.rumahsakit} ${e.nama_rumahsakit}`,
+// icon: image
+// });
+
+// marker.setMap(map);
+// marker.addListener("click", () => {
+// infowindow.open({
+// anchor: marker,
+// map,
+// shouldFocus: false,
+// });
+// });
+
+// map.addListener("click", () => {
+// infowindow.close();
+// });
+// });
+// }
+
+// window.initMap = initMap;
